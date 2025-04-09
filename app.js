@@ -16,7 +16,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://url-shortner-server-k7tz.onrender.com",
+      "https://url-shortner-client-peach.vercel.app/",
     ],
     credentials: true,
   })

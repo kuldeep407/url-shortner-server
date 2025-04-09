@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "5ff5510c-47b4-4261-adf0-0a4c919f409f",
+		"name": "Dacoid",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23893324",
+		"_collection_link": "https://lunar-satellite-105543.postman.co/workspace/New-Team-Workspace~5d5c2752-6738-40b5-b2c8-55b7db6f2c23/collection/23893324-5ff5510c-47b4-4261-adf0-0a4c919f409f?action=share&source=collection_link&creator=23893324"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"intern@dacoid.com\",\r\n     \"password\": \"Test123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user-login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user-login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signup",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"intern@dacoid.com\",\r\n     \"password\": \"Test123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user-signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user-signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "link",
+			"item": [
+				{
+					"name": "get short links",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Y0MjI3NzA0MmJkNWNlNzdiMzQ4MmYiLCJlbWFpbCI6ImludGVybkBkYWNvaWQuY29tIiwiaWF0IjoxNzQ0MTE1MjQwLCJleHAiOjE3NDQxMzMyNDB9.RNLQS1p635V_Ioo0Fs2-1JHgWlk6_u7j8fdBzJL7FWg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/get-short-links",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"get-short-links"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create short link",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Y0MjI3NzA0MmJkNWNlNzdiMzQ4MmYiLCJlbWFpbCI6ImludGVybkBkYWNvaWQuY29tIiwiaWF0IjoxNzQ0MTE2Njc0LCJleHAiOjE3NDQxMzQ2NzR9.KHkyE7IspbGB9xtw_R2qt_bZXAxNwB-0trKJeBIh60o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"originalUrl\": \"https://accounts.razorpay.com/auth/?redirecturl=https%3A%2F%2Fdashboard.razorpay.com&auth_intent=login&x-country-code=IN\",\r\n  \"customAlias\": \"razorpay\",\r\n  \"expiration\": \"2025-09-22T23:59:59.000Z\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/create-short-link",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"create-short-link"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "analytics",
+			"item": [
+				{
+					"name": "redirect",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Y0MjI3NzA0MmJkNWNlNzdiMzQ4MmYiLCJlbWFpbCI6ImludGVybkBkYWNvaWQuY29tIiwiaWF0IjoxNzQ0MTMzMTQ5LCJleHAiOjE3NDQxNTExNDl9.ieRqVRMmv8iHBleemdcYpJob-FH46CpwTuYdJuLXIH8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/redirect-and-log/:shortId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"redirect-and-log",
+								":shortId"
+							],
+							"variable": [
+								{
+									"key": "shortId",
+									"value": "WjE_6fAzq"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Y0MjI3NzA0MmJkNWNlNzdiMzQ4MmYiLCJlbWFpbCI6ImludGVybkBkYWNvaWQuY29tIiwiaWF0IjoxNzQ0MTM4OTcyLCJleHAiOjE3NDQxNTY5NzJ9.azsSfLmvOYug35115UjSDTLR7XJPdHIB5goHtAE4S9Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/search-link?query=mui",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"search-link"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "mui"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
